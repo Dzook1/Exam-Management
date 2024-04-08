@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(5, 125, 125);
+}
+
+.header {
+    
+}
+
+.header-h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+.header-hr {
+    border: 3px solid rgb(0, 0, 0);
+}
