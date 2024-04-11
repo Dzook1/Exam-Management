@@ -7,7 +7,7 @@
             background-color: #71c0e4ba;
             font-family: 'Arial';
         }
-        .login {
+        .create {
             width: 382px;
             overflow: hidden;
             margin: 20px auto;
@@ -43,6 +43,10 @@
             color: white;
             font-size: 17px;
         }
+        a {
+            float: right;
+            background-color: rgb(255, 255, 255);
+        }
         .header-h1 {
             font-size: 70px;
             text-transform: uppercase;
@@ -57,8 +61,7 @@
         margin: auto;
         margin-bottom: 2rem;
         }
-      
-        a, button {
+        #sign-button {
     background-color: white;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -67,12 +70,11 @@
     margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 200px; 
 }
 
-a, button:hover {
+#sign-button:hover {
     background-color: #ddd;
-}
+}   
     </style>
 </head>
 <body>
@@ -80,18 +82,19 @@ a, button:hover {
         <h1 class="header-h1">ExamHub</h1>
         <hr class="header-hr">
     </header>
-    <div class="login">
-        <form id="login" method="get">
-            <h1>Welcome Back</h1>
+    <div class="create">
+        <form id="create" method="get">
+            <h1>Create Your Account!</h1>
+            <label><b>First Name</b></label><br>
+            <input type="text" name="Fname" id="Fname" placeholder="First Name"><br><br>
+            <label><b>Last Name</b></label><br>
+            <input type="text" name="Lname" id="Lname" placeholder="Last Name"><br><br>
             <label><b>Email</b></label><br>
-            <input type="text" name="Email" id="Email" placeholder="Email"><br><br>
+            <input type="text" name="email" id="email" placeholder="Email"><br><br>
             <label><b>Password</b></label><br>
             <input type="Password" name="Pass" id="Pass" placeholder="Password"><br><br>
             <center>
-                <button id="login-button">Log In</button>
-            </center>
-            <center>
-                <a href="registrate.html" class="button">No account? Sign In Here!</a>
+                <button id="create-button">Create Account!</button>
             </center>
         </form>
     </div>
