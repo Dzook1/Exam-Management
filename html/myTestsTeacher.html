@@ -33,7 +33,7 @@
             <br>
             <button class="test-button test-button-submissions">Submissions</button>
         </div>
-        <div class="tests-grid-plus">+</div>
+        <div class="tests-grid-plus" onclick="displayCreateTest()">+</div>
     </section>
 
 
@@ -45,13 +45,16 @@
             <input type="text" class="testName-input">
         </div>
 
-        <div class="createTest-box question-flex">
-            <label for="question-textarea">Question 1</label>
-            <textarea class="question-textarea" cols="50" rows="10"></textarea>
-            <button class="question-delete">x</button>
+        <div class="questions">
+            <div class="createTest-box question-flex">
+                <label for="question-textarea">Question</label>
+                <textarea class="question-textarea" cols="50" rows="10"></textarea>
+                <button class="question-delete" onclick="deleteQuestion(event)">x</button>
+            </div>
         </div>
+        
 
-        <button class="addQuestion">Add Question</button>
+        <button class="addQuestion" onclick="addQuestion()">Add Question</button>
         <button class="createTest-button">Create Test</button>
     </section>
 
