@@ -11,11 +11,8 @@ conn = engine.connect()
 def home():
     return render_template('index.html')
 
-
+@app.route('/registrate.html', methods = ["GET"])
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route('/registration')
-def registration():
-    return render_template('registrate.html')
