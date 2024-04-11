@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>ExamHub</h1>
+
+        <div class="nav">
+            <div class="nav-flex">
+                <a>My Tests</a>
+                <a>All Tests</a>
+                <a>Accounts</a>
+                <a>Sign-out</a>
+            </div>
+        </div>
+
+        <hr>
+
+    </header>
+
+    <section class="tests-grid">
+        <div class="tests-grid-test">
+            <p class="test-p">Test name</p>
+            <p class="test-p"># questions</p>
+            <button class="test-button test-button-edit">Edit</button>
+            <button class="test-button test-button-delete">Delete</button>
+            <br>
+            <button class="test-button test-button-submissions">Submissions</button>
+        </div>
+        <div class="tests-grid-plus">+</div>
+    </section>
+
+
+    <section class="createTest">
+        <button class="createTest-exit" onclick="createTestExit()">Exit</button>
+
+        <div class="createTest-box testName-box">
+            <label for="testName-input">Test Name</label>
+            <input type="text" class="testName-input">
+        </div>
+
+        <div class="createTest-box question-flex">
+            <label for="question-textarea">Question 1</label>
+            <textarea class="question-textarea" cols="50" rows="10"></textarea>
+            <button class="question-delete">x</button>
+        </div>
+
+        <button class="addQuestion">Add Question</button>
+        <button class="createTest-button">Create Test</button>
+    </section>
+
+    
+    <script src="../index.js"></script>
+</body>
+</html>
