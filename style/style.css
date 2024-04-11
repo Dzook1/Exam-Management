@@ -111,7 +111,7 @@ header h1 {
     font-size: 1.5rem;
     overflow-y: auto;
     border: solid 1px black;
-    display: block;
+    display: none;
 }
 
 .createTest-exit {
