@@ -3,6 +3,11 @@
 <head>
     <title>Login Form</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             background-color: #71c0e4ba;
             font-family: 'Arial';
@@ -51,16 +56,18 @@
             font-size: 70px;
             text-transform: uppercase;
             letter-spacing: 0.2rem;
-            margin: 2rem 0;
         }
-
-        .header-hr {
+        .Head{
+            background-color: rgba(58, 128, 161, 0.729);
+        }
+        .header{
         border: none;
         height: 5px;
         background-color: #000;
-        margin: auto;
-        margin-bottom: 2rem;
         }
+     hr {
+        border: 3px solid rgb(0, 0, 0);
+    }
         #sign-button {
     background-color: white;
     border: 1px solid #ccc;
@@ -78,10 +85,13 @@
     </style>
 </head>
 <body>
+<div class="Head">
     <header>
         <h1 class="header-h1">ExamHub</h1>
         <hr class="header-hr">
     </header>
+</div>
+
     <div class="create">
         <form id="create" method="get">
             <h1>Create Your Account!</h1>
