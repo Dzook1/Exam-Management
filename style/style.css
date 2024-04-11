@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,9 @@ body {
 }
 
 header {
-    background-color: rgba(58, 128, 161, 0.729);
+
+    background-color: rgba(10, 58, 81, 0.729);
+
 }
 
 header h1 {
@@ -29,6 +32,7 @@ header h1 {
     display: inline-block;
 }
 
+
 .nav-flex {
     display: flex;
     justify-content: flex-end;
@@ -42,6 +46,9 @@ header h1 {
 .nav-flex a:hover {
     cursor: pointer;
     color: whitesmoke;
+
+}
+
 }
 
 
@@ -194,3 +201,4 @@ input, textarea {
     cursor: pointer;
     background-color: lightblue;
 }
+

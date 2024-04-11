@@ -8,9 +8,14 @@ engine = create_engine(conn_str, echo=True)
 conn = engine.connect()
 
 @app.route('/')
-def register():
-    return 'Hello, Flask!'
+def home():
+    return render_template('index.html')
+
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/registration')
+def registration():
+    return render_template('registrate.html')
