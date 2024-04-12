@@ -28,3 +28,5 @@ function deleteQuestion(event) {
     const div = button.closest('.createTest-box');
     div.remove();
 }
+
+
