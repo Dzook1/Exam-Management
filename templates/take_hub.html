@@ -89,10 +89,22 @@ button:hover {
   height: auto;
   background-color: #fff;
   border-radius: 15px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin: -800px auto 0;
+}
+.createTest-exit {
+    float: left;
+    border: solid 2px black;
+    padding: 5px;
+    width: 60px;
+    background-color: crimson;
+    color: whitesmoke;
+}
+
+.createTest-exit:hover {
+    cursor: pointer;
 }
     </style>
 </head>
@@ -125,7 +137,19 @@ button:hover {
     </div>
 <div class="container">
     <div class="takeTest-box">
+        <button class="createTest-exit" onclick="createTestExit()">Exit</button>
         
+        <br><br>
+        <br>
+        <center><h1>test</h1></center>
+        <br>
+        <br>
+        <br>
+        <br>
+
+<center>
+    <button id="Submit-button">Submit</button>
+</center>
     </div>
 </div>
 

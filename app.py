@@ -47,6 +47,14 @@ def myTestsTeacher():
 def send_js(path):
     return send_from_directory('static', path)
 
+@app.route('/accounts')
+def get_accounts():
+    accountsStudent = conn.execute(text("Select * from students")).all()
+    accountsTeacher = conn.execute(text("Select * from teachers")).all()
+    print(accountsStudent)
+    print(accountsTeacher)
+    return render_template('accounts.html', account_info=accountsStudents, accountsTeacher[0:10])
+
 
 if __name__ == '__main__':
     app.run(debug=True)
