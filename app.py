@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 from sqlalchemy import create_engine, text
 
 app = Flask(__name__)
@@ -20,11 +20,13 @@ def loginTgo():
     email = request.form['Email']
     password = request.form['Password']
 
-    query = text('Select Student_ID from Students where Email = :email and Password = :password')
+    query = text('Select Teacher_ID from Teachers where Email = :email and Password = :password')
     user = conn.execute(query, {'email': email, 'password': password}).fetchone()
     if user:
+        print("Yes")
         return render_template('myTestsTeacher.html')
     else:
+        print("No")
         return render_template('loginTeacher.html')
     
 @app.route('/registrationTeacher.html', methods=['GET'])
@@ -37,6 +39,13 @@ def signupTgo():
     conn.commit()
     return render_template('registrationTeacher.html')
 
+@app.route('/myTestsTeacher.html')
+def myTestsTeacher():
+    return render_template('myTestsTeacher.html')
+
+@app.route('/static/index.js')
+def send_js(path):
+    return send_from_directory('static', path)
 
 
 if __name__ == '__main__':
