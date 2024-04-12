@@ -117,8 +117,8 @@ button:hover {
                 <div class="nav-flex">
                     <a>My Tests</a>
                     <a>All Tests</a>
-                    <a>Accounts</a>
-                    <a>Sign-out</a>
+                    <a href="/accounts.html">Accounts</a>
+                    <a href="/">Sign-out</a>
                 </div>
             </div>
     
@@ -156,6 +156,14 @@ button:hover {
 
 
 
-<script src="../test.js"></script>
+<script>function TestOpen() {
+    takeTestBox = document.getElementsByClassName('takeTest-box')[0];
+    takeTestBox.style.display = 'block';
+}
+function createTestExit() {
+    let createTestBox = document.getElementsByClassName('takeTest-box')[0];
+    createTestBox.style.display = 'none';
+
+}</script>
 </body>
 </html>
