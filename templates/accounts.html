@@ -49,6 +49,14 @@
         cursor: pointer;
         color: whitesmoke;
     }
+    .teach{
+        float: right;
+        padding-right: 100px;
+    }
+    .stud{
+        float: left;
+        padding-left: 100px;
+    }
     </style>
     </head>
     <body>
@@ -61,7 +69,7 @@
                         <a>My Tests</a>
                         <a>All Tests</a>
                         <a>Accounts</a>
-                        <a>Sign-out</a>
+                        <a href="/">Sign-out</a>
                     </div>
                 </div>
         
@@ -69,13 +77,50 @@
     
             </header>
         </header>
-{% for i in account_info%}
-<ul>
-    <li>ID: {{i[0]}}</li>
-    <ul>
-    <li>Name: {{i[1]}}</li>
-    <li>Email: {{i[2]}}</li>
-    <li>Password: {{i[3]}}</li>
-</ul>
-</ul>
-{% endfor %}
+
+
+
+<div class="teach">
+        <h1>Teacher Accounts</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Teacher ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in teacher_data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<div class="stud">
+<h1>Student Accounts</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in student_data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
