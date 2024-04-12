@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #71c0e4ba;
+    
+    }
+    
+    header {
+        background-color: rgba(58, 128, 161, 0.729);
+    }
+    
+    header h1 {
+        font-size: 100px;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 10%;
+        display: inline-block;
+    }
+     hr {
+        border: 3px solid rgb(0, 0, 0);
+    }
+    
+    .nav {
+        display: inline-block;
+    }
+    
+    
+    .nav-flex {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .nav-flex a {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+    
+    .nav-flex a:hover {
+        cursor: pointer;
+        color: whitesmoke;
+    }
+    </style>
+    </head>
+    <body>
+        <header>
+            <header>
+                <h1>ExamHub</h1>
+                
+                <div class="nav">
+                    <div class="nav-flex">
+                        <a>My Tests</a>
+                        <a>All Tests</a>
+                        <a>Accounts</a>
+                        <a>Sign-out</a>
+                    </div>
+                </div>
+        
+                <hr>
+    
+            </header>
+        </header>
+{% for i in account_info%}
+<ul>
+    <li>ID: {{i[0]}}</li>
+    <ul>
+    <li>Name: {{i[1]}}</li>
+    <li>Email: {{i[2]}}</li>
+    <li>Password: {{i[3]}}</li>
+</ul>
+</ul>
+{% endfor %}
