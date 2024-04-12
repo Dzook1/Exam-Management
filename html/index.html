@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: #71c0e4ba;
+            font-family: 'Arial';
+        }
+        .login {
+            width: 382px;
+            overflow: hidden;
+            margin: 20px auto;
+            padding: 27px;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        label {
+            font-size: 17px;
+            color: rgb(85, 85, 87);
+        }
+        input[type="text"], input[type="password"], input[type="button"] {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+            padding-left: 8px;
+            background-color: rgb(190, 188, 188);
+        }
+        input[type="button"] {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 17px;
+            padding-left: 7px;
+            color: rgb(21, 21, 60);
+        }
+        span {
+            color: white;
+            font-size: 17px;
+        }
+        .header-h1 {
+            font-size: 70px;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin: 2rem 0;
+        }
+
+        .header-hr {
+        border: none;
+        height: 5px;
+        background-color: #000;
+        margin: auto;
+        margin-bottom: 2rem;
+        }
+      
+        a, button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; 
+}
+
+a, button:hover {
+    background-color: #ddd;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-h1">ExamHub</h1>
+        <hr class="header-hr">
+    </header>
+    <div class="login">
+        <form id="login" method="get">
+            <h1>Welcome Back</h1>
+            <label><b>Email</b></label><br>
+            <input type="text" name="Email" id="Email" placeholder="Email"><br><br>
+            <label><b>Password</b></label><br>
+            <input type="Password" name="Pass" id="Pass" placeholder="Password"><br><br>
+            <center>
+                <button id="login-button">Log In</button>
+            </center>
+            <center>
+                <a href="registrate.html" class="button">No account? Sign In Here!</a>
+            </center>
+        </form>
+    </div>
+</body>
+</html>
