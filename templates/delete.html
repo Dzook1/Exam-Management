@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;}
+  body {
+      background-color: #71c0e4ba;
+  }
+  header {
+      background-color: rgba(58, 128, 161, 0.729);}
+  header h1 {
+      font-size: 100px;
+      text-align: left;
+      margin-left: 5%;
+      margin-right: 10%;
+      display: inline-block;}
+   hr {
+      border: 3px solid rgb(0, 0, 0);}
+  .nav {
+      display: inline-block;}
+
+  .nav-flex {
+      display: flex;
+      justify-content: flex-end;}
+  .nav-flex a {
+      font-size: 2rem;
+      padding: 2rem;}
+  .nav-flex a:hover {
+      cursor: pointer;
+      color: whitesmoke;}</style>
+</head>
+<body>
+    <header>
+        <header>
+            <h1>ExamHub</h1>
+
+            <div class="nav">
+                    <div class="nav-flex">
+                        <a href="/take_hub.html">Take Test</a>
+                        <a href="/loginTeacher.html">Teacher Tools</a>
+                        <a href="/accounts.html">Accounts</a>
+                        <a href="/">Sign-out</a>
+                    </div> 
+            </div>
+
+            <hr>
+      
+        </header>
+    </header>
+
+    <div class="body">
+        <form action="/delete.html" method="POST">
+            <input type="number" name="Test_ID" placeholder="Test ID" class="input_field"> <br>
+            <input type="submit" value="Submit" class="input_submit">
+        </form>
+    </div>
+</body>
