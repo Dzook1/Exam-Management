@@ -9,88 +9,35 @@
 <body>
     
     <header>
-        <h1>ExamHub</h1>
-
         <div class="nav">
+            <h1>ExamHub</h1>
             <div class="nav-flex">
-                <a>My Tests</a>
-                <a>All Tests</a>
-                <a href="/">Sign-out</a>
+                <a href="/take_hub.html">Take Test</a>
+                <a href="/loginTeacher.html">Manage Tests</a>
                 <a href="/accounts.html">Accounts</a>
+                <a href="/">Sign-out</a>
             </div>
         </div>
-
-        <hr>
 
     </header>
+    <div class="body">
 
-    <section class="tests-grid">
-        <div class="tests-grid-test">
-            <p class="test-p">Test name</p>
-            <p class="test-p"># questions</p>
-            <button class="test-button test-button-edit">Edit</button>
-            <button class="test-button test-button-delete">Delete</button>
-            <br>
-            <button class="test-button test-button-submissions">Submissions</button>
-        </div>
-        <div class="tests-grid-plus" onclick="displayCreateTest()">+</div>
-    </section>
+        <form action="/myTestsTeacher.html" method="POST">
+            <input type="text" name="TestName" placeholder="Test Name" class="input_field"> <br>
+            <input type="text" name="Q1" placeholder="Question 1" class="input_field"> <br>
+            <input type="text" name="Q2" placeholder="Question 2" class="input_field"> <br>
+            <input type="text" name="Q3" placeholder="Question 3" class="input_field"> <br>
+            <input type="text" name="Q4" placeholder="Question 4" class="input_field"> <br>
+            <input type="text" name="Q5" placeholder="Question 5" class="input_field"> <br>
+            <input type="text" name="Q6" placeholder="Question 6" class="input_field"> <br>
+            <input type="text" name="Q7" placeholder="Question 7" class="input_field"> <br>
+            <input type="text" name="Q8" placeholder="Question 8" class="input_field"> <br>
+            <input type="text" name="Q9" placeholder="Question 9" class="input_field"> <br>
+            <input type="text" name="Q10" placeholder="Question 10" class="input_field"> <br>
+            <input type="submit" value="Submit" class="input_submit">
+        </form>
+    </div>
 
 
-    <section class="createTest">
-        <button class="createTest-exit" onclick="createTestExit()">Exit</button>
-
-        <div class="createTest-box testName-box">
-            <label for="testName-input">Test Name</label>
-            <input type="text" class="testName-input">
-        </div>
-
-        <div class="questions">
-            <div class="createTest-box question-flex">
-                <label for="question-textarea">Question</label>
-                <textarea class="question-textarea" cols="50" rows="10"></textarea>
-                <button class="question-delete" onclick="deleteQuestion(event)">x</button>
-            </div>
-        </div>
-        
-
-        <button class="addQuestion" onclick="addQuestion()">Add Question</button>
-        <button class="createTest-button">Create Test</button>
-    </section>
-
-    
-    <script>function createTestExit() {
-        let createTestBox = document.getElementsByClassName('createTest')[0];
-        createTestBox.style.display = 'none';
-        let testGrid = document.getElementsByClassName('tests-grid')[0];
-        testGrid.style.display = 'grid';
-    }
-    
-    function displayCreateTest() {
-        let testGrid = document.getElementsByClassName('tests-grid')[0];
-        testGrid.style.display = 'none';
-        let createTestBox = document.getElementsByClassName('createTest')[0];
-        createTestBox.style.display = 'block';
-    }
-    
-    function addQuestion() {
-        const questionDiv = `<div class="createTest-box question-flex">
-        <label for="question-textarea">Question</label>
-        <textarea class="question-textarea" cols="50" rows="10"></textarea>
-        <button class="question-delete" onclick="deleteQuestion(event)">x</button>
-        </div>`;
-    
-        let createTestBox = document.getElementsByClassName('questions')[0];
-        createTestBox.insertAdjacentHTML('beforeend', questionDiv);
-    }
-    
-    function deleteQuestion(event) {
-        const button = event.target;
-        const div = button.closest('.createTest-box');
-        div.remove();
-    }
-    
-    
-    </script>
 </body>
 </html>
